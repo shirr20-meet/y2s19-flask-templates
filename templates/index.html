@@ -1,1 +1,21 @@
-<!-- Put the HTML template for your page here! -->
+<!doctype html>
+    <html>
+        <head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+      </head>
+        <body>
+            <h1> Hello world!</h1>
+            <h2>hello {{name}}</h2>
+            {%for food in food_list%}
+            	<p>my favorite food is {{food}}</p>
+
+            {%endfor%}
+            {%if age>65%}
+            	<p>he is retaierd</p>
+            	{%else %}
+            	<p>he is working</p>
+            	{%endif%}
+
+
+        </body>
+    </html>
